@@ -31,7 +31,6 @@
 
 os: linux
 
-sudo: required
 dist: trusty
 
 language: cpp

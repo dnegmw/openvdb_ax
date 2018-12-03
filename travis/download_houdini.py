@@ -54,19 +54,20 @@ br.submit()
 # retrieve download id
 br.open('https://www.sidefx.com/download/daily-builds/')
 
-# https://www.sidefx.com/download/eula/accept/?next=/download/download-houdini/56026/
+houid = -1
 
-# houid = -1
+for link in br.links():
+    if '/download/download-houdini' not in link.url:
+        continue
+    if link.text.startswith('houdini-%s' % version) and 'linux_x86_64' in link.text:
+        response = br.follow_link(text=link.text, nr=0)
+        url = response.geturl()
 
-# for link in br.links():
-#     if '/download/download-houdini' not in link.url:
-#         continue
-#     re.compile("")
-#     if link.text.startswith('houdini-%s' % version) and 'linux_x86_64' in link.text:
-#         response = br.follow_link(text=link.text, nr=0)
-#         url = response.geturl()
-#         houid = url.split('/download-houdini/')[-1]
-#         break
+        print url
+        print link.url
+
+        houid = url.split('/download-houdini/')[-1]
+        break
 
 # # download houdini tarball in 50MB chunks
 # url = 'https://www.sidefx.com/download/download-houdini/%sget/' % houid

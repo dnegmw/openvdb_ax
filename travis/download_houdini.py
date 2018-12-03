@@ -30,8 +30,10 @@
 #
 # Author: Dan Bailey
 
-import mechanize
 import sys
+print(sys.version)
+
+import mechanize
 import re
 import exceptions
 

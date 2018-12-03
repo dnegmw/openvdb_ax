@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python
 #
 # Copyright (c) 2012-2018 DreamWorks Animation LLC
 #

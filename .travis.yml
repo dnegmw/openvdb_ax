@@ -37,5 +37,10 @@ language: cpp
 
 compiler: gcc
 
+addons:
+  apt:
+    packages:
+    - python-mechanize
+
 install:
     - travis/download_houdini.py

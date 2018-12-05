@@ -30,12 +30,10 @@
 #
 # Author: Dan Bailey
 
-import sys
-print(sys.version)
-
+import exceptions
 import mechanize
 import re
-import exceptions
+import sys
 
 # this argument is for the major.minor version of Houdini to download (such as 15.0, 15.5, 16.0)
 version = sys.argv[1]

@@ -46,7 +46,7 @@ br.set_handle_robots(False)
 
 # login to sidefx.com as openvdb
 br.open('https://www.sidefx.com/login/?next=/download/daily-builds')
-br.select_form(action="/login/", nr=0)
+br.select_form(predicate= lambda x: x.attrs.get('action') == "/login/", nr=0)
 br.form['username'] = 'openvdb_ax'
 br.form['password'] = 'openvdb_ax_password'
 br.submit()

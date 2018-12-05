@@ -43,4 +43,4 @@ addons:
     - python-mechanize
 
 install:
-    - travis/download_houdini.py
+    - travis/download_houdini.py 17.0
